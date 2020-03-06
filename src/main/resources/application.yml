@@ -1,0 +1,18 @@
+server:
+  port: 8765
+  
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+  
+spring:
+  application:
+    name: zuul-gateway-server
+  cloud:
+    config:
+      uri: http://localhost:8888
+      
+zuul:
+  RibbonRoutingFilter:
+    route:
+      disable:  false
