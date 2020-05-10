@@ -7,7 +7,7 @@ eureka:
   
 spring:
   application:
-    name: zuul-gateway-server
+    name: gateway-server
   cloud:
     config:
       uri: http://localhost:8888
@@ -16,3 +16,4 @@ zuul:
   RibbonRoutingFilter:
     route:
       disable:  false
+  sensitiveHeaders: Cookie,Set-Cookie # Pass Authorization header downstream
